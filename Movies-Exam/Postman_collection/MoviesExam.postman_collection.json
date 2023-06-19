@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "e8f8a077-003d-4a80-9f22-f76500d00b37",
+		"name": "MoviesExam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10066343"
+	},
+	"item": [
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "CreateGenre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Drama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/Genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGenres",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "public",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:20800/api/Genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Genre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Language",
+			"item": [
+				{
+					"name": "CreateLanguage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Frances\",\r\n    \"code\":\"fr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/Language",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Language"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLenguages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/Language",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Language"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "CreateRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rolename\":\"Main Actress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/Role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRoles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/Role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Role"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "CreateStaff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Julian Moore\",\r\n    \"bornhdate\":\"1976-04-29T10:27:24Z\",\r\n    \"RoleList\": [\"21dfbee8-2a2d-44cf-5a8d-08db6cdaa70e\"],\r\n    \"VisualContentId\": \"c17b6fd8-3171-4b28-9052-b06024505b15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/Staff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStaff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/Staff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"Staff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TypeContent",
+			"item": [
+				{
+					"name": "CreateTypeContent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"namecontent\":\"Documentals\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/TypeContent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"TypeContent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTypeContent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/TypeContent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"TypeContent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VisualContent",
+			"item": [
+				{
+					"name": "CreateVisualContent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Fast and furius 5\",\r\n    \"Synopsis\": \"Sinopsis de la pelicula\",\r\n    \"country\": \"US\",\r\n    \"image\":\"https://m.media-amazon.com/images/I/51peLnTG-DL._UF1000,1000_QL80_.jpg\",\r\n    \"realeseyear\": 2005,\r\n    \"rating\":7.7,\r\n    \"Typecontentid\":\"1dc4654b-40c0-49d8-7be5-08db6c8876c3\",\r\n    \"GenreList\": [\"7cdd10f2-c4d4-4f85-c185-08db6ce5036f\"],\r\n    \"LanguageList\": [\"7fa069bd-2388-47d6-ba12-08db6c87def5\",\"a8ab15e5-8263-4844-ba13-08db6c87def5\"]\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20800/api/VisualContent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"VisualContent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisualContent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/VisualContent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"VisualContent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisualContentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/VisualContent/2e2adfb3-bedb-4ee9-b40d-fa2dba723c0d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"VisualContent",
+								"2e2adfb3-bedb-4ee9-b40d-fa2dba723c0d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVisualPopularContent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/VisualContent/popular",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"VisualContent",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchVisualContent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20800/api/VisualContent/search/magn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20800",
+							"path": [
+								"api",
+								"VisualContent",
+								"search",
+								"magn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
