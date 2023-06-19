@@ -19,6 +19,7 @@ builder.Services.AddMediatR(typeof(CreateGenre.Creator).Assembly);
 builder.Services.AddAutoMapper(typeof(GetGenre.Query));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddResponseCaching( x => x.MaximumBodySize = 1024 );
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -33,5 +34,18 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseResponseCaching();
+
+app.Use(async (context, next) =>
+{
+    context.Response.GetTypedHeaders().CacheControl =
+        new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+        {
+            Public = true,
+            MaxAge = TimeSpan.FromSeconds(15),
+        };
+    await next();
+});
 
 app.Run();
