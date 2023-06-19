@@ -19,7 +19,7 @@ services:
   movies-exam:
     container_name: movieapp
     ports:
-    - 8001:80
+    - 20800:80
     image: ${DOCKER_REGISTRY-}moviesexam
     build:
       context: .
