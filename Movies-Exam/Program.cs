@@ -24,6 +24,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -47,5 +49,7 @@ app.Use(async (context, next) =>
         };
     await next();
 });
+
+
 
 app.Run();
